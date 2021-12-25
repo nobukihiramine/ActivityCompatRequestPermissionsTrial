@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
 					.setMessage( R.string.message_request_permission_rationale )
 					.setPositiveButton( android.R.string.ok,
 										( dialog, which ) ->
-												ActivityCompat.requestPermissions( MainActivity.this,
+												ActivityCompat.requestPermissions( this,
 																				   new String[]{ Manifest.permission.CAMERA },
 																				   REQUEST_CODE_PERMISSION_CAMERA_RATIONALE ) )
 					.show();
