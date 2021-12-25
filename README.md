@@ -1,4 +1,4 @@
-# ActivityCompatRequestPermissionsTrial
+# ActivityCompat RequestPermissions Trial
 ActivityCompat#requestPermissions()を用いて、権限リクエストする方法の試行
 
 このアプリの挙動としては、以下。
