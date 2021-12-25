@@ -22,8 +22,8 @@ https://developer.android.com/training/permissions/requesting?hl
 
 public class MainActivity extends AppCompatActivity
 {
-	private static final int REQUEST_CODE_PERMISSION_CAMERA           = 1; // カメラの権限をリクエストするときの識別コード
-	private static final int REQUEST_CODE_PERMISSION_CAMERA_RATIONALE = 2; // カメラの権限をリクエストするときの識別コード。理由表示ありの場合。
+	private static final int REQUEST_CODE_PERMISSION_CAMERA                = 1; // カメラの権限をリクエストするときの識別コード
+	private static final int REQUEST_CODE_PERMISSION_CAMERA_WITH_RATIONALE = 2; // カメラの権限をリクエストするときの識別コード。理由表示ありの場合。
 
 	@Override
 	protected void onCreate( Bundle savedInstanceState )
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
 										( dialog, which ) ->
 												ActivityCompat.requestPermissions( this,
 																				   new String[]{ Manifest.permission.CAMERA },
-																				   REQUEST_CODE_PERMISSION_CAMERA_RATIONALE ) )
+																				   REQUEST_CODE_PERMISSION_CAMERA_WITH_RATIONALE ) )
 					.show();
 		}
 		else
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity
 		super.onRequestPermissionsResult( requestCode, permissions, grantResults );
 
 		if( REQUEST_CODE_PERMISSION_CAMERA == requestCode
-			|| REQUEST_CODE_PERMISSION_CAMERA_RATIONALE == requestCode )
+			|| REQUEST_CODE_PERMISSION_CAMERA_WITH_RATIONALE == requestCode )
 		{
 			if( 0 != grantResults.length
 				&& PackageManager.PERMISSION_GRANTED == grantResults[0] )
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity
 				//   - これまでに「権限リクエストダイアログ」を表示したことがあり、その際に「許可する」を選択した場合は、権限は許可されているので、ここに来ない。
 				//   - これまでに「権限リクエストダイアログ」を表示したことがあり、その際に「許可しない」を選択し、かつ、「今後は確認しない」を「チェックした」場合は、false(=説明ダイアログ表示は不要)が返る。
 				//   - これまでに「権限リクエストダイアログ」を表示したことがあり、その際に「許可しない」を選択し、かつ、「今後は確認しない」を「チェックしなかった」場合は、true(=説明ダイアログが必要)が返る。
-				if( REQUEST_CODE_PERMISSION_CAMERA_RATIONALE == requestCode
+				if( REQUEST_CODE_PERMISSION_CAMERA_WITH_RATIONALE == requestCode
 					|| ActivityCompat.shouldShowRequestPermissionRationale( this,
 																			Manifest.permission.CAMERA ) )
 				{
