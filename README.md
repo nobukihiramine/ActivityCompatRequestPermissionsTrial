@@ -15,7 +15,6 @@ ActivityCompat#requestPermissions()を用いて、権限リクエストする方
 
 補足）  
 2021/12/1 現在、Fragment#requestPermissions()は、deprecatedとなっているが、ActivityCompat#requestPermissions()は、deprecatedとはなっていないので、「ActivityCompat#requestPermissions()を用いる方法」「registerForActivityResult()を用いる方法」はどちらも有効な方法。  
-２つの方法に動作の違いはない。実装上も大きな違いはないが、  
 「ActivityCompat#requestPermissions()を用いる方法」は、クラスメンバーに、リクエストコード定義が必要。  
 「registerForActivityResult()を用いる方法」は、クラスメンバーに、リクエストランチャー定義が必要。
 
