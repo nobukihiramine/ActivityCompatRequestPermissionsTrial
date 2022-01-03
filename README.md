@@ -2,22 +2,22 @@
 ActivityCompat#requestPermissions()を用いて、権限リクエストする方法の試行
 
 このアプリの挙動としては、以下。
-- 「スタート」ボタンの初回押下⇒「権限リクエスト」ダイアログ⇒「許可」の押下⇒「カメラ処理開始可能」メッセージ
-- 「スタート」ボタンの初回押下⇒「権限リクエスト」ダイアログ⇒「許可しない」の押下⇒「カメラ処理開始不可」メッセージ
-- 「許可」後「スタート」ボタンの押下⇒「カメラ処理開始可能」メッセージ
-- 「許可しない」後「スタート」ボタンの押下⇒「権限リクエストの理由説明」ダイアログ⇒「権限リクエスト」ダイアログ
-- 「今後表示しないをチェックして許可しない」後「スタート」ボタンの押下⇒「詳細設定画面への誘導」ダイアログ
+- (1)「スタート」ボタンの初回押下⇒「権限リクエスト」ダイアログ⇒「許可」の押下⇒「カメラ処理開始『可能』」メッセージ
+- (2)「スタート」ボタンの初回押下⇒「権限リクエスト」ダイアログ⇒「許可しない」の押下⇒「カメラ処理開始『不可』」メッセージ
+- (3)「許可」後「スタート」ボタンの押下⇒「カメラ処理開始『可能』」メッセージ
+- (4)「許可しない」後「スタート」ボタンの押下⇒「権限リクエストの理由説明」ダイアログ⇒「権限リクエスト」ダイアログ（⇒(1),(2)）
+- (5)「今後表示しないをチェックして許可しない」後「スタート」ボタンの押下⇒「詳細設定画面への誘導」ダイアログ
 
 ## 関連
 権限リクエストする方法は、「ActivityCompat#requestPermissions()を用いる方法」以外にも、「registerForActivityResult()を用いる方法」があります。  
-registerForActivityResult()を用いて、権限リクエストする方法の試行については、以下リポジトリを参照  
+「registerForActivityResult()を用いて、権限リクエストする方法の試行」については、以下リポジトリを参照。  
 [RegisterForActivityResultTrial](https://github.com/nobukihiramine/RegisterForActivityResultTrial)
 
 補足）  
-2021/12/1 現在、Fragment#requestPermissions()は、deprecatedとなっているが、ActivityCompat#requestPermissions()は、deprecatedとはなっていないので、「ActivityCompat#requestPermissions()を用いて、権限リクエストする方法」「registerForActivityResult()を用いて、権限リクエストする方法」はどちらも有効な方法。  
+2021/12/1 現在、Fragment#requestPermissions()は、deprecatedとなっているが、ActivityCompat#requestPermissions()は、deprecatedとはなっていないので、「ActivityCompat#requestPermissions()を用いる方法」「registerForActivityResult()を用いる方法」はどちらも有効な方法。  
 ２つの方法に動作の違いはない。実装上も大きな違いはないが、  
-「ActivityCompat#requestPermissions()を用いて、権限リクエストする方法」は、クラスメンバーに、リクエストコード定義が必要。  
-「registerForActivityResult()を用いて、権限リクエストする方法」は、クラスメンバーに、リクエストランチャー定義が必要。
+「ActivityCompat#requestPermissions()を用いる方法」は、クラスメンバーに、リクエストコード定義が必要。  
+「registerForActivityResult()を用いる方法」は、クラスメンバーに、リクエストランチャー定義が必要。
 
 ## Screenshots : スクリーンショット
 <img src="images/screenshot_anim01.gif" width="240" alt="Screenshot"/>
