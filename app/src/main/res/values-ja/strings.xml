@@ -4,7 +4,7 @@
     <string name="label_start">スタート</string>
 
     <string name="message_request_permission_rationale">カメラを使うために権限が必要です。</string>
-    <string name="confirm_open_application_details_settings">カメラを使うために権限が必要です。\nこのアプリケーションの詳細設定画面を開きますか？</string>
+    <string name="confirm_open_application_details_settings">カメラを使うために権限が必要です。\n「設定」アプリの「このアプリの画面」を開きますか？</string>
 
     <string name="message_start_process_using_camera">カメラを使った処理を開始できます。</string>
     <string name="message_permission_denied">カメラを使う権限がないため、カメラを使った処理を開始できません。</string>

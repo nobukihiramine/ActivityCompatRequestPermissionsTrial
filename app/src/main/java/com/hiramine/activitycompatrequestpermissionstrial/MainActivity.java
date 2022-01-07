@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity
 					// 「これまでに『許可しない』かつ『今後は確認しない』を選択していてここに来た」場合
 
 					// 「権限が必要であることの説明と、このアプリの詳細設定画面を開くか」のダイアログを表示し、
-					// 「OK」ボタンを押すと、「設定」アプリの「このアプリの詳細設定」を開く
+					// 「OK」ボタンを押すと、「設定」アプリの「このアプリの画面」を開く
 					// 「No」ボタンを押すと、「権限が拒否された」メッセージを表示
 					new AlertDialog.Builder( this )
 							.setTitle( R.string.app_name )

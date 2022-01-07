@@ -4,7 +4,7 @@
     <string name="label_start">Start</string>
 
     <string name="message_request_permission_rationale">Permission required to use the Camera.</string>
-    <string name="confirm_open_application_details_settings">Permission required to use the Camera.\nDo you want to open the details settings screen for this application?</string>
+    <string name="confirm_open_application_details_settings">Permission required to use the Camera.\nDo you want to open the "Screen for this app" in the "Settings" application?</string>
 
     <string name="message_start_process_using_camera">The process using the camera can be started.</string>
     <string name="message_permission_denied">This application does not have permission to use the camera, so the process using the camera cannot be started.</string>
