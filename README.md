@@ -19,7 +19,7 @@ ActivityCompat#requestPermissions()を用いて、権限リクエストする方
 「registerForActivityResult()を用いる方法」は、クラスメンバーに、リクエストランチャー定義が必要。
 
 ## Screenshots : スクリーンショット
-<img src="images/screenshot_anim01.gif" width="240" alt="Screenshot"/>
+<kbd><img src="images/screenshot01.png" width="240"/></kbd> <kbd><img src="images/screenshot02.png" width="240" alt="Screenshot"/></kbd> <kbd><img src="images/screenshot03.png" width="240" alt="Screenshot"/></kbd>
 
 ## Requirements : 必要条件、依存関係
 - Android Studio 2020.3.1 Patch3
